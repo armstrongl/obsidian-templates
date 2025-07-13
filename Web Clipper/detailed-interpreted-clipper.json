@@ -36,7 +36,7 @@
 		},
 		{
 			"name": "tags",
-			"value": "resource,clipping, {{site|kebab}}, {{\\\"a comma-separated list of six keywords in kebab-case\\\"}}",
+			"value": "clipping, {{site|kebab}}, {{\\\"a comma-separated list of six keywords in kebab-case\\\"}}",
 			"type": "multitext"
 		},
 		{

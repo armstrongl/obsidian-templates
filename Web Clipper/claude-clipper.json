@@ -1,0 +1,49 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "Claude",
+	"behavior": "create",
+	"noteContentFormat": "\n{{\"output a JSON object representing the conversation structured as a fenced in JSON codeblock with role (human or assistant) and then content for the dialogue\"}}\n\n{{content}}",
+	"properties": [
+		{
+			"name": "tags",
+			"value": "clipping, conversation",
+			"type": "multitext"
+		},
+		{
+			"name": "date",
+			"value": "{{date|date:\\\"YYYY-MM-DD\\\"}}",
+			"type": "text"
+		},
+		{
+			"name": "tags",
+			"value": "clipping, conversation, claude",
+			"type": "multitext"
+		},
+		{
+			"name": "description",
+			"value": "{{\\\"A 1-2 summary of the conversation\\\"}}",
+			"type": "text"
+		},
+		{
+			"name": "author",
+			"value": "Claude",
+			"type": "multitext"
+		},
+		{
+			"name": "title",
+			"value": "{{title|title}}",
+			"type": "text"
+		},
+		{
+			"name": "source",
+			"value": "{{url}}",
+			"type": "text"
+		}
+	],
+	"triggers": [
+		"https://www.claude.ai",
+		"https://www.claude.ai/*"
+	],
+	"noteNameFormat": "{{\"A 1-4 word title for the conversations\"}}",
+	"path": "Inbox/Clippings"
+}
