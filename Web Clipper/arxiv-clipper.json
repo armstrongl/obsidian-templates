@@ -1,0 +1,28 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "arXiv",
+	"behavior": "create",
+	"noteContentFormat": "{{content}}",
+	"properties": [
+		{
+			"name": "author",
+			"value": "{{selector:.ltx_authors .ltx_personname|wikilink|join}}",
+			"type": "multitext"
+		},
+		{
+			"name": "published",
+			"value": "{{selector:.ltx_dates|replace:\\\"(\\\",\\\"\\\"|replace:\\\")\\\",\\\"\\\"|date:\\\"YYYY-MM-DD\\\"}}",
+			"type": "date"
+		},
+		{
+			"name": "tags",
+			"value": "clipping, arxiv",
+			"type": "multitext"
+		}
+	],
+	"triggers": [
+		"https://arxiv.org/html/"
+	],
+	"noteNameFormat": "{{title}}",
+	"path": "Clippings"
+}

@@ -1,0 +1,62 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "Detailed Interpreted",
+	"behavior": "create",
+	"noteContentFormat": "# {{\"A short logical title of the page\"|title}}\n\n{{\"A three paragraph summary of the page\"|callout:(\"summary\", \"Summary\", false)}}\n\n- - -\n\n{{content}",
+	"properties": [
+		{
+			"name": "title",
+			"value": "{{\\\"A short logical title of the page\\\"|title}}",
+			"type": "text"
+		},
+		{
+			"name": "source",
+			"value": "{{site|title}}",
+			"type": "text"
+		},
+		{
+			"name": "author",
+			"value": "{{author|split:\\\", \\\"|wikilink|join}}",
+			"type": "multitext"
+		},
+		{
+			"name": "published",
+			"value": "{{published|date:\\\"YYYY-MM-DD\\\"}}",
+			"type": "date"
+		},
+		{
+			"name": "created",
+			"value": "{{date|date:\\\"YYYY-MM-DD\\\"}}",
+			"type": "date"
+		},
+		{
+			"name": "description",
+			"value": "{{\\\"A three sentence paragraph describing the content.\\\"}}",
+			"type": "text"
+		},
+		{
+			"name": "tags",
+			"value": "resource,clipping, {{site|kebab}}, {{\\\"a comma-separated list of six keywords in kebab-case\\\"}}",
+			"type": "multitext"
+		},
+		{
+			"name": "url",
+			"value": "{{url}}",
+			"type": "text"
+		},
+		{
+			"name": "original-title",
+			"value": "{{title|title}}",
+			"type": "text"
+		},
+		{
+			"name": "aliases",
+			"value": "{{\\\"A three to four word alias for the title\\\"|title}}",
+			"type": "text"
+		}
+	],
+	"triggers": [],
+	"noteNameFormat": "{{\"A short logical title of the page\"|title}}",
+	"path": "Resources/Clippings",
+	"context": "{{content}}\n{{title}}\n{{url}}\n{{author}}\n{{domain}}\n{{description}}\n{{site}}\n\n{{fullHtml|strip_tags:(\"script,h1,h2,h3,h4,h5,h6,meta,a,ol,ul,li,p,em,strong,i,b,img,video,audio,math,tablecite,strong,td,th,tr,caption,u\")|strip_attr:(\"alt,src,href,id,content,property,name,datetime,title\")}}"
+}

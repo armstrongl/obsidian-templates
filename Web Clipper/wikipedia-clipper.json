@@ -1,0 +1,33 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "Wikipedia",
+	"behavior": "create",
+	"noteContentFormat": "{{selectorHtml:#mw-content-text|remove_html:(\\\".navbox,.printfooter,.side-box\\\")|markdown}}",
+	"properties": [
+		{
+			"name": "author",
+			"value": "Wikipedia",
+			"type": "multitext"
+		},
+		{
+			"name": "site",
+			"value": "Wikipedia",
+			"type": "text"
+		},
+		{
+			"name": "published",
+			"value": "{{published}}",
+			"type": "date"
+		},
+		{
+			"name": "tags",
+			"value": "clippings, wikipedia",
+			"type": "multitext"
+		}
+	],
+	"triggers": [
+		"https://en.wikipedia.org"
+	],
+	"noteNameFormat": "{{title}}",
+	"path": "References"
+}
