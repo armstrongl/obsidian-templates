@@ -1,0 +1,58 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "O Reilly",
+	"behavior": "create",
+	"noteContentFormat": "# {{title|replace:\"/\\d+\\./g\":\"\"}}\n\n{{selectorHtml:#content-panel||remove_html:(\"img,iframe,aside,a,#tocItems,#NavProgressBar\")|markdown}}",
+	"properties": [
+		{
+			"name": "title",
+			"value": "{{title|replace:\\\"/\\d+\\./g\\\":\\\"\\\"}}",
+			"type": "text"
+		},
+		{
+			"name": "source",
+			"value": "{{meta:property:og:site_name}}",
+			"type": "text"
+		},
+		{
+			"name": "author",
+			"value": "{{meta:property:og:book:author}}",
+			"type": "multitext"
+		},
+		{
+			"name": "created",
+			"value": "{{date|date:\\\"YYYY-MM-DD\\\"}}",
+			"type": "date"
+		},
+		{
+			"name": "description",
+			"value": "{{description}}",
+			"type": "text"
+		},
+		{
+			"name": "tags",
+			"value": "clipping,oreilly,book",
+			"type": "multitext"
+		},
+		{
+			"name": "isbn",
+			"value": "{{meta:property:og:book:isbn}}",
+			"type": "text"
+		},
+		{
+			"name": "url",
+			"value": "{{url}}",
+			"type": "text"
+		},
+		{
+			"name": "publisher",
+			"value": "{{meta:name:publisher}}",
+			"type": "text"
+		}
+	],
+	"triggers": [
+		"https://learning.oreilly.com/"
+	],
+	"noteNameFormat": "{{title|replace:\"/\\d+\\./g\":\"\"}}",
+	"path": "Inbox/Clippings"
+}
