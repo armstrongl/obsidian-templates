@@ -1,0 +1,43 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "Mindtools",
+	"behavior": "create",
+	"noteContentFormat": "# {{schema:@Article:headline}}\n\n{{selectorHtml:.draft-renderer-container|remove_html:(\"img,script,iframe,svg,style,path,#article-Recommended,.MuiTypography-caption\")|markdown|trim|replace:(\"\\\"\":\"\",\"\\\\[\":\"\",,\"\\\\]\":\"\",\"\\n,\\n\":\"\",\"\\\\\":\"\")}}",
+	"properties": [
+		{
+			"name": "title",
+			"value": "{{schema:@Article:headline}}",
+			"type": "text"
+		},
+		{
+			"name": "source",
+			"value": "{{url}}",
+			"type": "text"
+		},
+		{
+			"name": "author",
+			"value": "{{author}}",
+			"type": "multitext"
+		},
+		{
+			"name": "created",
+			"value": "{{date|date:\\\"YYYY-MM-DD\\\"}}",
+			"type": "date"
+		},
+		{
+			"name": "description",
+			"value": "{{schema:@Article:genre}}.",
+			"type": "text"
+		},
+		{
+			"name": "tags",
+			"value": "clipping, mindtools",
+			"type": "multitext"
+		}
+	],
+	"triggers": [
+		"https://www.mindtools.com/"
+	],
+	"noteNameFormat": "{{schema:@Article:headline}}",
+	"path": "Inbox/Clippings"
+}

@@ -1,0 +1,38 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "Notion",
+	"behavior": "create",
+	"noteContentFormat": "{{selectorHtml:h1|markdown}}\n\n{{selectorHtml:body|remove_html:(\"img,script,iframe,.notion-table_of_contents-block,.notion-sidebar,.notion-topbar,.notion-page-controls,#skip-to-content,.notion-record-icon\")|markdown}}",
+	"properties": [
+		{
+			"name": "title",
+			"value": "{{selectorHtml:h1|markdown}}",
+			"type": "text"
+		},
+		{
+			"name": "source",
+			"value": "{{url}}",
+			"type": "text"
+		},
+		{
+			"name": "author",
+			"value": "Notion",
+			"type": "multitext"
+		},
+		{
+			"name": "created",
+			"value": "{{date|date:\\\"YYYY-MM-DD\\\"}}",
+			"type": "date"
+		},
+		{
+			"name": "tags",
+			"value": "clipping, notion",
+			"type": "multitext"
+		}
+	],
+	"triggers": [
+		"https://www.notion.so/"
+	],
+	"noteNameFormat": "{{selectorHtml:h1|markdown}}",
+	"path": "Inbox/Clippings"
+}

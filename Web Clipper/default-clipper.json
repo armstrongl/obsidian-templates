@@ -1,0 +1,46 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "Default",
+	"behavior": "create",
+	"noteContentFormat": "# {{title|title}}\n\n{{content}}",
+	"properties": [
+		{
+			"name": "title",
+			"value": "{{title|title}}",
+			"type": "text"
+		},
+		{
+			"name": "source",
+			"value": "{{url}}",
+			"type": "text"
+		},
+		{
+			"name": "author",
+			"value": "{{author|title}}",
+			"type": "multitext"
+		},
+		{
+			"name": "created",
+			"value": "{{date|date:\\\"YYYY-MM-DD\\\"}}",
+			"type": "date"
+		},
+		{
+			"name": "description",
+			"value": "{{description}}",
+			"type": "text"
+		},
+		{
+			"name": "tags",
+			"value": "clipping",
+			"type": "multitext"
+		},
+		{
+			"name": "published",
+			"value": "{{published|date:\\\"YYYY-MM-DD\\\"}}",
+			"type": "date"
+		}
+	],
+	"triggers": [],
+	"noteNameFormat": "{{title|title}}",
+	"path": "Inbox/Clippings"
+}
